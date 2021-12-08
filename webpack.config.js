@@ -12,6 +12,9 @@ module.exports = {
     devServer: {
         port: 3000
     },
+    resolve: {
+        extensions: ['.js','.jsx']
+    },
     plugins: [
         new HTMLWebpackPlugin({ template: "./src/index.html" }),
         new CleanWebpackPlugin()
@@ -27,7 +30,7 @@ module.exports = {
                 use: ["file-loader"]
             },
             {
-                test: /\.js$/, 
+                test: /\.(js|jsx)$/, 
                 exclude: "/node_modules/", 
                 use: {
                     loader: "babel-loader"

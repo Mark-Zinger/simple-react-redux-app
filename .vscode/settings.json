@@ -6,5 +6,5 @@
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "smooth" ,
     "editor.insertSpaces": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 4
   }

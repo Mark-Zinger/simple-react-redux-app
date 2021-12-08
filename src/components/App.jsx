@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './App.less';
 
 export default function App() {
   return (
-    <div>
+    <div className="app">
       React is ready!
     </div>
   )
