@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",    // does not compress files
-    entry: "./src/index.js",
+    entry:[ "@babel/polyfill", "./src/index.js" ],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash].js"
@@ -25,6 +25,13 @@ module.exports = {
             {
                 test: /\.(jpg|jpeg|png|svg)$/,
                 use: ["file-loader"]
+            },
+            {
+                test: /\.js$/, 
+                exclude: "/node_modules/", 
+                use: {
+                    loader: "babel-loader"
+                }
             }
         ]
     }
